@@ -1,8 +1,6 @@
 package voiceselenium;
-import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.junit.After;
@@ -28,7 +26,11 @@ public class voicetest {
         Thread.sleep(9000);
         driver.findElement(acceptCookiesLocator).click();
     }
-
+    
+     /**
+     *
+     * @throws InterruptedException
+     */
         @Test
         public void voicemodForMacOrPc() throws InterruptedException {
             //voicemod for mac and pc
@@ -41,6 +43,11 @@ public class voicetest {
             driver.navigate().back();
             driver.findElement(voiceModForMacLocator).click();
         }
+    
+     /**
+     *
+     * @throws InterruptedException
+     */
          @Test
         public void headerNavigationAccount() throws InterruptedException{
         // header navigation - for pc is not located because we covered in the previous step
@@ -61,7 +68,11 @@ public class voicetest {
             driver.close();
             driver.quit();
              }
-         //Soundboard
+     /**
+     *
+     * @throws InterruptedException
+     */
+    //Soundboard
     @Test
     public void headerNavigationSoundboard() throws InterruptedException{
         driver = new FirefoxDriver();
